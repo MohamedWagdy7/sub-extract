@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from re import findall
 from sys import argv
 
