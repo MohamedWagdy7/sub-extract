@@ -11,5 +11,6 @@ with open(argv[2]) as file:
     subdomains = findall(rf'(.[^:/]+\.)+{argv[1]}', text)
     for subdomain in subdomains:
         subdomain = subdomain.replace("https://","")
-        print(subdomain.replace("http://","")+argv[1])
+        subdomain = subdomain.replace("http://","")
+        print(subdomain.replace("/","")+argv[1])
         
