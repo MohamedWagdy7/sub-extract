@@ -8,6 +8,6 @@ if len(argv) < 3:
 
 with open(argv[2]) as file:
     text = file.read()
-    subdomains = findall(rf'(.[^: /]+\.)+{argv[1]}', text)
+    subdomains = findall(rf'(.[^:/]+\.)+{argv[1]}', text)
     for subdomain in subdomains:
-        print(subdomain+argv[1])
+        print(subdomain.replace("/","")+argv[1])
